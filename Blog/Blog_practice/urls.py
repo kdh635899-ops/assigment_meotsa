@@ -1,8 +1,10 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from . import views
+
+app_name = 'blog'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls')),
-    path('accounts/', include('accounts.urls')),
+    path("", views.BlogListView.as_view(), name="blog_list"),
+    path("<int:pk>/", views.BlogDetailView.as_view(), name="blog_detail"),
+    path("<int:pk>/comments/", views.CommentListView.as_view(), name="comment_list"),
 ]

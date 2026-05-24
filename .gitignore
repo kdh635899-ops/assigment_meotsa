@@ -1,0 +1,22 @@
+# Django
+*.pyc
+__pycache__/
+*.sqlite3
+db.sqlite3
+.env
+.venv
+venv/
+myvenv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
