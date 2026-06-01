@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python manage.py runserver)",
+      "Bash(ping -n 4 127.0.0.1)",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-USER-Desktop-Blog\\\\f0c2b3de-ff7d-4103-8db6-3d8a521cef66\\\\tasks\\\\bsn7kju1p.output'\")",
+      "Bash(ping -n 3 127.0.0.1)",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-USER-Desktop-Blog\\\\f0c2b3de-ff7d-4103-8db6-3d8a521cef66\\\\tasks\\\\bdr824znt.output'\")",
+      "Bash(python manage.py makemigrations Blog_practice)",
+      "Bash(python manage.py runserver 8000)",
+      "PowerShell(Start-Process -FilePath \"C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Postman\\\\Postman.exe\" -ErrorAction SilentlyContinue)",
+      "PowerShell(\"Postman�� ���Ƚ��ϴ�!\")",
+      "Bash(curl -s http://localhost:8000/blogs/)",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s -X POST http://localhost:8000/blogs/ -H 'Content-Type: application/json' -d '{\"title\":\"새로운 게시글입니다\",\"body\":\"이것은 Postman 테스트 글입니다\"}')",
+      "Bash(curl -s -X POST http://localhost:8000/blogs/ -H 'Content-Type: application/json' -d '{\"title\":\"New Article\",\"body\":\"This is a test post from testing\"}')",
+      "Bash(curl -s http://localhost:8000/blogs/1/)",
+      "Bash(curl -s -X PATCH http://localhost:8000/blogs/1/ -H 'Content-Type: application/json' -d '{\"title\":\"Updated Title\",\"body\":\"Updated Body Content\"}')",
+      "Bash(curl -s -w \"\\\\nHTTP Status: %{http_code}\\\\n\" -X DELETE http://localhost:8000/blogs/4/)",
+      "Bash(curl -s http://localhost:8000/blogs/1/comments/)",
+      "Bash(curl -s -X POST http://localhost:8000/blogs/1/comments/ -H 'Content-Type: application/json' -d '{\"comment\":\"This is a great post!\"}')"
+    ]
+  }
+}

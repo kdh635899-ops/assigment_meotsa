@@ -25,7 +25,7 @@ from decouple import config
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -123,3 +123,28 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 AUTH_USER_MODEL = 'accounts.CustomUser'
+# settings.
+DEBUG = False
+
+ALLOWED_HOSTS = ['127.0.0.1', '13.124.80.153', 'yangbongtv.shop']
+
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+# settings.py (MacOS는 상단에 아래 두 줄 추가)
+import pymysql
+pymysql.install_as_MySQLdb()
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': 3306,
+    }
+}
